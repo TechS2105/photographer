@@ -1,0 +1,469 @@
+@media(max-width: 1200px){
+
+    /** body section */
+
+    body{
+
+        width: 100%;
+
+    }
+
+    body > .scrollingButton{
+
+      visibility: hidden;
+      
+    }
+
+    /** Menu section */
+
+    header{
+
+        width: 100%;
+
+    }
+
+    nav{
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: #ededed;
+
+    }
+
+    nav > .logoimg{
+
+        margin-left: 20px;
+
+    }
+
+   .menu > ul li{
+
+        display: none;
+
+   }
+
+   .menu > ul i{
+
+        font-size: 20px;
+        margin-right: 20px;
+        color: #fff;
+
+   }
+
+   :is(i#open){
+
+     display: block;
+
+   }
+
+   :is(i#close){
+
+     display: none;
+
+   }
+
+   /** hero section */
+   .herosection{
+
+    margin-top: 0px;
+    height: 100%;
+
+   }
+
+   .herosection > .hero{
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px;
+
+   }
+
+   .hero > .text1{
+
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    width: 100%;
+
+   }
+
+   .text1 > h1{
+
+    text-align: center;
+    font-size: 15vmin;
+
+   }
+
+   .hero > .image{
+
+    padding-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+   }
+
+   .image > img{
+
+    height: 95vmin;
+    width: 90vmin;
+    object-fit: cover;
+
+   }
+
+   .hero > .text2{
+
+    width: 100%;
+    padding-top: 0px;
+
+   }
+
+   .text2 > .textsec h1{
+
+    text-align: center;
+    font-size: 7vmin;
+    width: 100%;
+    overflow: visible;
+    margin-bottom: 6vmin;
+
+   }
+
+   .text2 > .textsec p{
+
+    text-align: center;
+    width: 100%;
+    font-size: 3.5vmin;
+    line-height: 5vmin;
+
+   }
+
+    
+   /** footer section */
+
+   footer{
+
+    width: 100%;
+    height: 100%;
+    padding: 90px 0px 20px 0px;
+
+  }
+
+  footer > .footerSection{
+
+    width: 100%;
+
+  }
+
+    .sociallink>.fb,
+    .tweet,
+    .print,
+    .insta{
+
+      font-size: 5vmin;
+      padding: 2vmin;
+
+    }
+
+  .footerSection > .contactsection{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .contactsection > .cbox1{
+
+    width: 100%;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .contactsection>.cbox1 span {
+
+    font-size: 4vmin;
+
+
+  }
+
+  .contactsection>.cbox1 p {
+
+    font-size: 4vmin;
+
+  }
+
+  .contactsection > .cbox2{
+
+    margin-bottom: 50px;
+    width: 100%;
+
+  }
+
+  .contactsection>.cbox2 h2 {
+
+    font-size: 6vmin;
+
+  }
+
+  .contactsection>.cbox2 a button {
+
+    font-size: 4vmin;
+    width: 40vmin;
+    height: 8vmin;
+
+  }
+
+  .contactsection > .cbox3{
+
+    width: 100%;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 150px;
+
+  }
+
+  .contactsection>.cbox3 p {
+
+    font-size: 3vmin;
+    width: 90vmin;
+    line-height: 4vmin;
+
+  }
+
+  footer > .copyrightcontent{
+
+    width: 100%;
+    height: 100%;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+  }
+
+  .copyrightcontent>.copyrighttext {
+
+    font-size: 3vmin;
+
+  }
+
+  /** contact section */
+  .contactdetailssection{
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .contactdetails{
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+
+  }
+
+  .contactdetails > .socialiconbox{
+
+    height: 100%;
+    width: 100%;
+
+  }
+
+  .contactdetails > .socialiconbox .socialicon{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    height: 10vmin;
+    width: 60vmin;
+    gap: 5vmin;
+
+  }
+
+  .socialiconbox > .socialicon i{
+
+    font-size: 7vmin;
+
+  }
+
+  /** contact form section */
+  .contactformsection{
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .contactformsection > .contactform{
+
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: left;
+
+  }
+
+  .contactform > h3{
+
+    width: 350px;
+    padding-left: 1vmin;
+    padding-bottom: 30px;
+    margin: auto;
+    font-size: 8vmin;
+
+  }
+
+  .contactform > .form{
+
+    width: 100%;
+
+  }
+
+  .contactform > .form form{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .form > form input{
+
+    width: 80vmin;
+    height: 5vmin;
+
+  }
+
+  .form > form textarea{
+
+    width: 80vmin;
+
+  }
+
+  .form > form #submit{
+
+    width: 80vmin;
+    font-size: 3vmin;
+
+  }
+
+  ::placeholder{
+
+    font-size: 3vmin;
+
+  }
+
+  /** contact address */
+  .contactaddress{
+
+    height: 100%;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+
+  }
+
+  .contactaddress > .contact{
+
+    height: 100%;
+    width: 400px;
+
+
+  }
+
+  .contactaddress > .contact h2{
+
+    padding: 50px 0px 0px 20px;
+    font-size: 10vmin;
+    width: 100%;
+
+  }
+
+  .contact > .phone{
+
+    padding: 4px 0px 0px 20px;
+    width: 350px;
+
+  }
+
+  .contact > .phone h4{
+
+    font-size: 5vmin;
+
+  }
+
+  .contact > .phone p{
+
+    font-size: 4vmin;
+
+  }
+
+  .contact > .email{
+
+    padding: 40px 0px 0px 20px;
+    width: 350px;
+
+  }
+
+  .contact > .email h4{
+
+    font-size: 5vmin;
+
+  }
+
+  .contact > .email p{
+
+    font-size: 4vmin;
+
+  }
+
+  .contact > .location{
+
+    padding: 40px 0px 30px 20px;
+    width: 350px;
+
+  }
+
+  .contact > .location h4{
+
+    font-size: 5vmin;
+
+  }
+
+  .contact > .location p{
+
+    font-size: 4vmin;
+
+  }
+
+  /** map area section */
+  .maparea{
+
+    width: 100%;
+    height: 30vh;
+
+  }
+
+  .maparea > .map{
+
+    width: 100%;
+    height: 100%;
+
+  }
+
+}

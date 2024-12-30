@@ -1,0 +1,764 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+:root{
+
+    --primary-font: "Fjalla One", serif;
+    --secondary-font: "Work Sans", serif;
+    --primary-font-color: #4A4B7C;
+    --secondary-font-color: #000000;
+    --slection-color: #5E5E62;
+    --font-weight: 500;
+
+}
+
+::selection{
+
+    background-color: var(--slection-color);
+    color: var(--secondary-font-color);
+
+}
+
+/** scrolling button */
+.scrollBtn{
+
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    margin: 0px 10px 10px 0px;
+    background-color: #4A4B7C;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+
+}
+
+.scrollBtn > i{
+
+    font-weight: 600;
+    font-size: 20px;
+    color: #fff;
+
+}
+
+/** Menu section */
+
+header {
+
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 99999;
+
+}
+
+nav {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+nav>.logoimg img {
+
+    width: 170px;
+    object-fit: cover;
+
+}
+
+.menu>ul li {
+
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 16px;
+
+}
+
+.menu>ul li a {
+
+    color: rgb(0, 0, 0);
+    font-family: var(--secondary-font);
+    text-decoration: none;
+
+}
+
+.menu>ul li a:hover {
+
+    color: var(--primary-font-color);
+    transition: all 0.3s ease-in;
+
+}
+
+.menu>ul i {
+
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #656565;
+    padding: 10px;
+
+}
+
+:is(i#open, i#close) {
+
+    display: none;
+
+}
+
+/** Responsive Section */
+
+.responsivemenu {
+
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    background-color: #4a4b7c;
+    height: 90px;
+    display: none;
+
+}
+
+.responsivemenu>ul li {
+
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    background-color: #ffffff;
+
+}
+
+.responsivemenu>ul li a {
+
+    color: var(--primary-text-color);
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    text-decoration: none;
+
+}
+
+/** hero section */
+.herosectionpart{
+
+    width: 100%;
+    height: 120vh;
+    background-image: linear-gradient(360deg, #E8E8F0, #F2F2FA);
+    margin-top: -100px;
+
+}
+
+.herosectionpart > .herosection{
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+
+}
+
+.herosection > .text1, .image, .text2{
+
+    width: 400px;
+    padding: 150px 0px 0px 0px;
+
+}
+
+.text1 {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.text1 > h1{
+
+    text-align: right;
+    font-size: 100px;
+    color: var(--primary-font-color);
+    font-family: var(--primary-font);
+    font-weight: var(--font-weight);
+    overflow: hidden;
+    
+}
+
+.image {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.image > img{
+
+    width: 100%;
+    height: 600px;
+    border-radius: 50%;
+    filter: drop-shadow(5px 5px 10px #111111a8);
+    border-right: 5px solid snow;
+    border-left: 2px solid snow;
+
+}
+
+.text2 {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.text2 > h2{
+
+    width: 300px;
+    line-height: 40px;
+    font-size: 30px;
+    font-family: var(--primary-font);
+    font-weight: var(--font-weight);
+    color: var(--primary-font-color);
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+
+.text2 > p{
+
+    width: 300px;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 350;
+    line-height: 25px;
+    overflow: hidden;
+
+}
+
+/** portfolio images */
+.portfolioSectionImage{
+
+    height: 360vh;
+    background-color: #F2F2FA;
+    padding: 50px 0px;
+
+}
+
+.portfolioSectionImage > .portfolioImages {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 20px 0px;
+
+}
+
+.portfolioImages > .img{
+
+    width: 450px;
+    height: 600px;
+    perspective: 500px;
+
+}
+
+.img > .portimage{
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 0px;
+    filter: drop-shadow(10px 10px 5px #111);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+
+.portimage > img{
+
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s ease;
+    object-fit: cover;
+    transform-style: preserve-3d;
+     transform: rotateY(360deg);
+
+}
+
+.portimage > img:hover{
+
+    transform: scale(1.1);
+
+}
+
+/** responsive portfolio image */
+.responsivePortfolioSectionImage{
+
+    height: 360vh;
+    background-color: #F2F2FA;
+    padding: 50px 0px;
+    display: none;
+
+}
+
+.responsivePortfolioSectionImage > .rPortfolioImages{
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 20px 0px;
+    width: 100%;
+
+}
+
+.rPortfolioImages > .rimg{
+
+    width: 450px;
+    height: 600px;
+
+}
+
+.rimg > .rportimage{
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50px;
+    filter: drop-shadow(10px 10px 5px #111);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+}
+
+.rportimage > img{
+
+    width: 100%;
+    transition: all 0.8s ease;
+    object-fit: cover;
+    height: 100%;
+
+}
+
+.rportimage > img:hover{
+
+    transform: scale(1.1);
+
+}
+
+/** contact me section */
+.contactmesection{
+
+    background-color: #F2F2FA;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+
+}
+
+.contactmesection > img{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+
+}
+
+.contactmesection > .contactme{
+
+    position: relative;
+    z-index: 9999;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.contacttext{
+
+    overflow: hidden;
+
+}
+
+.contactme > .contacttext h2{
+
+    width: 1000px;
+    font-size: 110px;
+    text-align: center;
+    color: var(--primary-font-color);
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+
+.contactbtn {
+
+    overflow: hidden;
+
+}
+
+.contactme > .contactbtn a button{
+
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #111;
+    font-weight: 600;
+
+}
+
+.contactme > .contactbtn a button::before{
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 0%;
+    background-color: #111;
+    transition: all 0.5s ease;
+
+}
+
+.contactme > .contactbtn a button:hover{
+
+    color: #fff;
+    transition: all 0.5s ease;
+
+}
+
+.contactme > .contactbtn a button:hover::before{
+
+    height: 100%;
+
+}
+
+/** responsive contact me section */
+.responsivecontactmesection{
+
+    background-color: #F2F2FA;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    display: none;
+
+}
+
+.responsivecontactmesection > img{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+
+}
+
+.responsivecontactmesection > .rcontactme{
+
+    position: relative;
+    z-index: 9999;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+
+}
+
+.rcontacttext {
+
+    overflow: hidden;
+
+}
+
+.rcontactme>.rcontacttext h2 {
+
+    width: 1000px;
+    font-size: 110px;
+    text-align: center;
+    color: var(--primary-font-color);
+    font-family: var(--primary-font);
+    font-weight: 500;
+}
+
+.rcontactbtn {
+
+    overflow: hidden;
+
+}
+
+.rcontactme>.rcontactbtn a button {
+
+    width: 200px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #111;
+    font-weight: 600;
+
+}
+
+.rcontactme>.rcontactbtn a button::before {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    width: 0%;
+    height: 100%;
+    background-color: #111;
+    transition: all 0.8s ease;
+
+}
+
+.rcontactme>.rcontactbtn a button:hover {
+
+    color: #fff;
+    transition: all 0.8s ease;
+
+}
+
+.rcontactme>.rcontactbtn a button:hover::before {
+
+    width: 100%;
+
+}
+
+/** footer section */
+footer {
+
+    width: 100%;
+    height: 90vh;
+    background-color: #f2f2fa;
+
+}
+
+footer>.footerSection {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 200px;
+    width: 100%;
+    height: 80vh;
+
+}
+
+.footerSection>.sociallink {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 70px 0px;
+
+}
+
+.sociallink>.fb,
+.tweet,
+.print,
+.insta {
+
+    font-size: 20px;
+    background-color: var(--slection-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+.footerSection>.contactsection {
+
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+/** cbox 1 */
+
+.contactsection>.cbox1 {
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 150px;
+    padding-top: 50px;
+
+}
+
+.contactsection>.cbox1 span {
+
+    font-family: var(--primary-font);
+    color: var(--primary-font-color);
+
+}
+
+.contactsection>.cbox1 p {
+
+    font-family: var(--secondary-font);
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--secondary-font-color);
+
+}
+
+/** cbox 2 */
+
+.contactsection>.cbox2 {
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 50px;
+
+}
+
+.contactsection>.cbox2 h2 {
+
+    font-family: var(--primary-font);
+    color: var(--primary-font-color);
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.contactsection>.cbox2 a button {
+
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.contactsection>.cbox2 a button::before {
+
+    content: "";
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all 1s ease;
+    background-color: #111111d2;
+
+}
+
+.cbox2>a button:hover::before {
+
+    width: 100%;
+
+}
+
+.cbox2>a button:hover {
+
+    color: #fff;
+    transition: all 1s ease;
+
+}
+
+/** cbox 3 */
+
+.contactsection>.cbox3 {
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: right;
+    padding-right: 150px;
+    padding-top: 50px;
+    gap: 40px;
+
+}
+
+.contactsection>.cbox3 p {
+
+    width: 350px;
+    line-height: 25px;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+/** Copy right text */
+.copyrightcontent {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px;
+
+}
+
+.copyrightcontent>.copyrighttext {
+
+    font-family: var(--secondary-font);
+    font-weight: 300;
+
+}
+
+
+
+
+
+

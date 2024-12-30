@@ -1,0 +1,975 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+
+:root{
+
+    --font1: "Fjalla One", serif;
+    --font2: "Work Sans", serif;
+    --color1: #4a4b7c;
+    --color2: #494949;
+    --wight1: 500;
+    --wight2: bold;
+
+}
+
+::selection{
+
+    background-color: #757575;
+    color: black;
+
+}
+
+body > .scrollingButton{
+
+    background-color: #4a4b7c;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    margin: 0px 10px 10px 0px;
+
+}
+
+.cursorDiv{
+
+    height: 15px ;
+    width: 15px;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #4a4b7c;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+
+}
+
+.cursorDiv > span{
+
+    font-size: 15px;
+    padding-top: 10px;
+
+}
+
+header{
+
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 99999;
+
+}
+
+nav{
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+nav > .logoimg img{
+
+    width: 170px;
+    object-fit: cover;
+
+}
+
+.menu > ul li{
+
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 16px;
+
+}
+
+.menu > ul li a{
+
+    color: rgb(0, 0, 0);
+    font-family: var(--font2);
+    text-decoration: none;
+
+}
+
+.menu > ul li a:hover{
+
+    color: var(--color1);
+    transition: all 0.3s ease-in;
+
+}
+
+.menu > ul i{
+
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #656565;
+    padding: 10px;
+
+}
+
+:is(i#open, i#close){
+
+    display: none;
+
+}
+
+/** Responsive Section */
+
+.responsivemenu{
+
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+    background-color: #4a4b7c;
+    height: 90px;
+    display: none;
+
+}
+
+.responsivemenu > ul li{
+
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    background-color: #ffffff;
+
+}
+
+.responsivemenu > ul li a{
+
+    color: var(--color2);
+    font-family: var(--font2);
+    font-size: 15px;
+    text-decoration: none;
+
+}
+
+/** Hero Section */
+
+.herosection{
+
+    width: 100%;
+    background-color: #ededed;
+    height: 140vh;
+    margin-top: -100px;
+
+}
+
+.herosection > .imgoverlay{
+
+    background-image: url(img/homepageimg/bg-01-free-img.png);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    background-attachment: fixed;
+
+}
+
+/** Hero text section */
+.textsection{
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10rem;
+
+}
+
+.textsection > span{
+
+    font-family: var(--font1);
+    color: #4a4b7c;
+    font-size: 18px;
+    font-weight: var(--wight1);
+    margin-top: 10rem;
+
+}
+
+.textsection > h1{
+
+    font-family: var(--font1);
+    width: 320px;
+    font-size: 100px;
+    color: #4a4b7c;
+    font-weight: var(--wight1);
+    line-height: 9rem;
+
+}
+
+.textsection > p{
+
+    width: 500px;
+    font-size: 15px;
+    font-family: var(--font2);
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 30px;
+
+}
+
+.textsection > button{
+
+    width: 170px;
+    height: 50px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    font-family: var(--font2);
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    box-shadow: 5px 10px 50px rgba(0, 0, 0, 0.273);
+
+}
+
+.textsection > button:hover{
+
+    background-color: black;
+    transition: all 0.5s ease-in;
+    color: #fff;
+
+}
+
+.headingClass{
+
+    animation: textAnimation 2s ease-in;
+
+}
+
+@keyframes textAnimation{
+
+    0%{
+
+        opacity: 0;
+        transform: translateX(-500px);
+
+    }100%{
+
+        opacity: 1;
+        transform: translateX(0px);
+
+    }
+
+}
+
+.zoomSection{
+
+    animation: zoomImage 2s ease-in;
+
+}
+
+@keyframes zoomImage{
+
+    from{
+
+        opacity: 0;
+        transform: scale(0px);
+
+    }to{
+
+        opacity: 1;
+        transform: scale(0.5px);
+
+    }
+
+}
+
+/** Abut me text section */
+
+.aboutmesection{
+
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    background-color: #ededed;
+    overflow: hidden;
+    
+
+}
+
+.aboutmesection > .imgsection{
+
+    width: 100%;
+    background-image: url(img/homepageimg/photographer-image.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+}
+
+.imgsection > .coloroverlay{
+
+    background-image: linear-gradient(180deg, #4a4b7c83 , #0000008a);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+.coloroverlay > .textsection1{
+
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.coloroverlay > .textsection1 h3{
+
+    color: #ffffff;
+    font-size: 45px;
+    font-family: var(--font1);
+    font-weight: var(--wight1);
+
+}
+
+.textsection1 > button{
+
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    font-family: var(--font2);
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.textsection1 > button:hover{
+
+    background-color: black;
+    transition: all 0.5s ease-in;
+    color: #fff;
+
+}
+
+.aboutmesection > .aboutmetext{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.aboutmetext > .text{
+
+   width: 100%;
+   padding-left: 200px;
+   padding-right: 150px;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+
+}
+
+.text > h2{
+
+    color: #4a4b7c;
+    font-family: var(--font1);
+    font-size: 130px;
+    font-weight: var(--wight1);
+
+}
+
+.text > span{
+
+    font-family: var(--font1);
+    font-weight: var(--wight1);
+    font-size: 18px;
+    color: #4a4b7c;
+    margin-bottom: 20px;
+
+}
+
+.text > p{
+
+    line-height: 25px;
+    font-size: 14px;
+    font-family: var(--font2);
+
+}
+
+/** Services Section */
+
+.services-section{
+
+    height: 110vh;
+    padding-top: 5rem;
+    text-align: center;
+    background-color: #ededed;
+
+}
+
+.services-section .serviceHeading> h2{
+
+    font-size: 120px;
+    font-family: var(--font1);
+    font-weight: var(--wight1);
+    color: #4a4b7c;
+
+}
+
+.services-section > .service{
+
+    display: flex;
+    width: 100%;
+
+}
+
+.service > .text1{
+
+    width: 33.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 620px;
+
+}
+
+/** First text zone */
+
+.text1 > .textzone{
+
+    padding-left: 10rem;
+    padding-right: 5rem;
+    text-align: left;
+    margin-bottom: 90px;
+
+}
+
+.textzone > h3{
+
+    font-size: 25px;
+    color: var(--color1);
+    font-family: var(--font1);
+    font-weight: var(--wight1);
+
+}
+
+.textzone > p{
+
+    font-size: 15.5px;
+    font-family: var(--font2);
+    font-weight: 350;
+    line-height: 25px;
+
+
+}
+
+/** Second text zone */
+
+.text1 > .textzone2{
+
+    padding-left: 10rem;
+    padding-right: 5rem;
+    text-align: left;
+    margin-bottom: 90px;
+
+}
+
+.textzone2 > h3{
+
+    font-size: 25px;
+    color: var(--color1);
+    font-family: var(--font1);
+    font-weight: var(--wight1);
+
+}
+
+.textzone2 > p{
+
+    font-size: 15.5px;
+    font-family: var(--font2);
+    font-weight: 350;
+    line-height: 25px;
+
+}
+
+/** Third text zone */
+
+.text1 > .textzone3{
+
+    padding-left: 10rem;
+    padding-right: 5rem;
+    text-align: left;
+    margin-bottom: 90px;
+
+}
+
+.textzone3 > h3{
+
+    font-size: 25px;
+    color: var(--color1);
+    font-family: var(--font1);
+    font-weight: var(--wight1);
+
+}
+
+.textzone3 > p{
+
+    font-size: 15.5px;
+    font-family: var(--font2);
+    font-weight: 350;
+    line-height: 25px;
+
+}
+
+.service > .img{
+
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.service > .img img{
+
+    margin-top: -15rem;
+    height: 800px;
+    object-fit: cover;
+    margin-left: -30px;
+    position: absolute;
+    z-index: 99999;
+}
+
+/** Second text box section */
+
+.service > .text2{
+
+    height: 620px;
+    width: 33.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text2 > .textzone{
+
+    padding-left: 5rem;
+    padding-right: 10rem;
+    text-align: left;
+    margin-bottom: 90px;
+
+}
+
+.text2 > .textzone2{
+
+    padding-left: 5rem;
+    padding-right: 10rem;
+    text-align: left;
+    margin-bottom: 90px;
+
+}
+
+.text2 > .textzone3{
+
+    padding-left: 5rem;
+    padding-right: 10rem;
+    text-align: left;
+    margin-bottom: 90px;
+
+}
+
+/** Portfolio section */
+.portfolio-section{
+
+    width: 100%;
+    height: 140vh;
+    background-color: #f2f2fa;
+    padding-top: 7rem;
+
+}
+
+.portfolio-section > .headingsection{
+
+    text-align: center;
+    height: 40vh;
+    width: 100%;
+}
+
+.headingsection > h2{
+
+    font-size: 120px;
+    font-family: var(--font1);
+    color: #4a4b7c;
+    font-weight: var(--wight1);
+
+}
+
+.headingsection > p{
+
+    font-family: var(--font1);
+    width: 600px;
+    font-size: 18px;
+    color: var(--color1);
+    margin: auto;
+
+}
+
+/** color palet img section */
+
+.colorpaletimg {
+
+    position: relative;
+    top: -30%;
+    width: 800px;
+
+}
+
+.colorpaletimg > img{
+
+    width: 450px;
+    position: absolute;
+    left: 5%;
+    object-fit: cover;
+
+}
+
+/** Image wrapper section */
+
+.imagewrappersection{
+
+    overflow-x: hidden;
+    margin-top: 3rem;
+    margin-left: 15rem;
+    position: relative;
+    z-index: 999;
+
+}
+
+.imageslider {
+
+    display: flex;
+    gap: 10px;
+    overflow-x: hidden;
+    width: 1300px;
+
+}
+
+.imageslider > img{
+
+    width: 350px;
+
+}
+
+/** Portfolio sectio image carousel buttons */
+
+.button{
+
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    margin-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+
+.button > .div{
+
+    height: 10px;
+    width: 10px;
+    background-color: #545454;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+/** Hire me section */
+.hiremesection{
+
+    width: 100%;
+    background-image: linear-gradient(180deg, #f2f2fa, #ededed);
+    height: 150vh;
+    position: relative;
+
+}
+
+.hiremebackgroundimg{
+
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+
+}
+
+.hiremesection > .hiremeimg img{
+
+    position: absolute;
+    top: 180px;
+    left: 35rem;
+
+}
+
+.hiremesection > .hiremetext{
+
+    font-size: 80px;
+    width: 1000px;
+    font-family: var(--font1);
+    position: relative;
+    z-index: 9999;
+    font-weight: var(--wight1);
+    left: 19%;
+    top: -20%;
+    color: #4a4b7c;
+    overflow: hidden;
+
+}
+
+.hiremetext > h2 span{
+
+    display: inline-block;
+
+}
+
+.hiremetext > button{
+
+    width: 190px;
+    background-color: #fff;
+    font-family: var(--font2);
+    font-size: 18px;
+    border: transparent;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: -5px 20px 20px #49494950;
+
+}
+
+.hiremetext > button:hover{
+
+    background-color: #000000;
+    transition: all 0.5s linear;
+    color: #fff;
+
+}
+
+/** Footer Section */
+footer{
+
+    width: 100%;
+    height: 90vh;
+    background-color: #f2f2fa;
+
+}
+
+footer > .footerSection{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 200px;
+    width: 100%;
+    height: 80vh;
+
+}
+
+.footerSection > .sociallink{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 70px 0px;
+
+}
+
+.sociallink > .fb,.tweet,.print,.insta{
+
+    font-size: 20px;
+    background-color: var(--color2);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+.footerSection > .contactsection{
+
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+/** cbox 1 */
+
+.contactsection > .cbox1{
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 150px;
+    padding-top: 50px;
+
+}
+
+.contactsection > .cbox1 span{
+
+    font-family: var(--font1);
+    color: var(--color1);
+
+}
+
+.contactsection > .cbox1 p{
+
+    font-family: var(--font2);
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color2);
+
+}
+
+/** cbox 2 */
+
+.contactsection > .cbox2{
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-top: 50px;
+
+}
+
+.contactsection > .cbox2 h2{
+
+    font-family: var(--font1);
+    color: var(--color1);
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.contactsection > .cbox2 a button{
+
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    font-family: var(--font2);
+    font-weight: 400;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.contactsection > .cbox2 a button::before{
+
+    content: "";
+    position: absolute;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+    transition: all 1s ease;
+    background-color: #111111d2;
+
+}
+
+.cbox2 > a button:hover::before{
+
+    width: 100%;
+
+}
+
+.cbox2 > a button:hover{
+
+    color: #fff;
+    transition: all 1s ease;
+
+}
+
+/** cbox 3 */
+
+.contactsection > .cbox3{
+
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    text-align: right;
+    padding-right: 150px;
+    padding-top: 50px;
+    gap: 40px;
+
+}
+
+.contactsection > .cbox3 p{
+
+    width: 350px;
+    line-height: 25px;
+    font-family: var(--font2);
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+/** Copy right text */
+.copyrightcontent {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px;
+
+}
+
+.copyrightcontent > .copyrighttext{
+
+    font-family: var(--font2);
+    font-weight: 300;
+
+}
+
+
